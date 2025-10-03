@@ -1,0 +1,122 @@
+/* Color and Font Variables */
+:root {
+    --primary-color: #0B2027; /* Dark Blue/Black */
+    --accent-color: #40798C; /* Medium Blue/Cyan */
+    --light-color: #D9D9D9;  /* Light Gray */
+    --font-serif: 'Playfair Display', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Lato', sans-serif;
+}
+
+/* General Reset and Body Styling */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 8rem; /* Padding to clear the fixed header */
+}
+
+/* --- Header Positioning (MATCHING INDEX.HTML) --- */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.header h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 4vw, 4rem);
+    color: var(--accent-color);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Navigation Links */
+.header .nav a {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--light-color);
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.header .nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content Typography */
+.content-section {
+    margin-bottom: 4rem;
+}
+
+/* Heading 2 (Main Section Titles) */
+.content-section h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--accent-color); /* Using the accent color for impact */
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+/* Heading 3 (Sub-Section Titles) */
+.content-section h3 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--accent-color); /* Using the accent color for impact */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Body Text */
+.biography p, .philosophy p {
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Skills Layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.skill-item {
+    padding: 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(64, 121, 140, 0.1); /* Semi-transparent accent color */
+}
+
+.skill-item strong {
+    font-family: var(--font-mono);
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
